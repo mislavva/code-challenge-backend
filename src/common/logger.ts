@@ -2,15 +2,12 @@ import { createLogger, transports, format } from 'winston';
 
 const newLogger = createLogger({
   level: 'info',
+  format: format.combine(
+    format.timestamp(),
+    format.json(),
+  ),
   transports: [
-    new transports.Console({
-      format: format.combine(
-        format.json(),
-        format.timestamp({
-          format: 'YYYY-MM-DD HH:mm:ss',
-        }),
-      ),
-    }),
+    new transports.Console(),
   ],
 });
 

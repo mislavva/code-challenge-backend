@@ -1,0 +1,23 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint-config-airbnb"
+  ],
+  "rules": {
+    "max-line-length": {
+      "options": [
+        170
+      ]
+    },
+    "no-console": [
+      true,
+      "log",
+      "error"
+    ],
+    "no-shadowed-variable": false,
+    "arrow-return-shorthand": true,
+    "no-parameter-reassignment": false,
+    "align": false,
+    "object-shorthand-properties-first": false
+  }
+}

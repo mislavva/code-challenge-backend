@@ -10,7 +10,7 @@ I have separated given challenge into two components: `authorization`, and `enco
 - `validators` -- define request validation middleware
 - `test` -- unit test of a specific components feature
 
-Main goal was to reduce file sizes, increase readability and modularity, reduce dependencies per module. With this design we can unit test a specific component feature easily, reuse code with zero or few changes
+Main goal was to reduce file sizes, increase readability and modularity, reduce dependencies per module. With this design we can unit test a specific component feature, reuse code with zero or few changes, add new funcionalities and refactor more easily.
 
 ## Notes
-- Removed `body-parser` as a project dependency since it is a part of express library as of 4.16.0. version.
+- Removed `body-parser` as a project dependency since it is a part of express library as of `v4.16.0.`

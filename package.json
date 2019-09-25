@@ -4,16 +4,28 @@
   "description": "Some boilerplate for a take-home code challenge.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "mocha --exit"
+    "build": "npm run lint && ./node_modules/.bin/tsc",
+    "start": "npm run build && cd ./build && node app.js",
+    "test": "./node_modules/.bin/mocha",
+    "lint": "./node_modules/.bin/tslint --project tsconfig.json"
   },
   "dependencies": {
+    "chai": "^4.2.0",
     "cors": "^2.8.5",
     "express": "4.17.1",
-    "express-validator": "^6.2.0"
+    "express-validator": "^6.2.0",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.3",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.7",
     "mocha": "^6.2.0",
-    "supertest": "^4.0.2"
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.6.3"
   }
 }

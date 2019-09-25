@@ -10,6 +10,6 @@ export class AppError extends Error {
   }
 }
 
-export const handleError = ({ name, message, httpCode }) => {
+export const handleError = ({ name, message, httpCode }: AppError) => {
   logger.error({ name, message, httpCode });
 };
